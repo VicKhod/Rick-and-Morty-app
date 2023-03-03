@@ -1,27 +1,11 @@
-<div class="row">
-    <div class="col-xs-12">
-      <a href="#" class="container text-center" *ngFor="let hero of heroes">
-
-        <button type="button" class="btn btn-outline-primary btn-sm" [class.selected]="hero === selectedHero" >
-          
-        <!-- <div >
-          <h4 class="list-group-item-text">{{ hero.id }}</h4>
-          <h4 class="list-group-item-heading">{{ hero.name }}</h4>
-          <p class="list-group-item-text">{{ hero.status }}</p>
-          <span class="pull-left">
-          <img
-            [src]="hero.imagePath"
-            alt="{{ hero.name }}"
-            class="img-responsive"
-            style="max-height: 50px;">
-        </span> -->
-        <!-- </div> -->
-
-        <a routerLink="/detail/{{hero.id}}">
-          <span class="badge">{{hero.id}}</span> {{hero.name}}
-        </a>
-        </button>
-        
-      </a>
+<div class="container">
+    <div class="card" *ngFor="let hero of heroes">
+      
+      <img [src]="hero.image" class="card-img-top" style="max-height: 50px;" [alt]="hero.name + ' img'">
+      <div class="card-body">
+        <div><span>gender: </span>{{hero.gender}}</div>
+        <h5 class="card-title">{{hero.name}}</h5>
+        <a routerLink="/detail/{{hero.id}}" class="btn btn-primary">look more</a>
+      </div>
     </div>
 </div>

@@ -1,7 +1,8 @@
 <div *ngIf="hero">
+  <img [src]="hero.image" class="img-responsive" style="max-height: 50px;" [alt]="hero.name + ' img'">
 
-    <h2>{{hero.name | uppercase}} Details</h2>
-    <div><span>id: </span>{{hero.id}}</div>
+    <h2>{{hero.name | uppercase}} info</h2>
+    <div><span>gender: </span>{{hero.gender}}</div>
     <div>
       <label for="hero-name">Hero name: </label>
       <input id="hero-name" [(ngModel)]="hero.name" placeholder="Hero name">
