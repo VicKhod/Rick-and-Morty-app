@@ -1,8 +1,8 @@
 export interface IHero {
-    id: number;
-    name: string;
-    status: string;
-    species?: string;
-    type?: string;
-    gender?: string;
-  }
+  id: number;
+  name: string;
+  status: string;
+  species?: string;
+  type?: string;
+  gender?: string;
+}

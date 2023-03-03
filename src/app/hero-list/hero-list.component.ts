@@ -8,6 +8,7 @@ import { IHero } from '../hero/hero';
   styleUrls: ['./hero-list.component.scss']
 })
 export class HeroListComponent implements OnInit {
+  
   heroes: IHero[] = [];
   selectedHero?: IHero;
 
