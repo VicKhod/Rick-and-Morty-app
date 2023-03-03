@@ -1,6 +1,7 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
+import { map } from 'rxjs';
 
 import { HeroService } from '../hero.service';
 import { IHero } from '../hero';
@@ -11,7 +12,8 @@ import { IHero } from '../hero';
   styleUrls: ['./hero.component.scss']
 })
 export class HeroComponent implements OnInit  {
-  @Input() hero?: IHero;
+  hero?: IHero;
+  episode: string[];
 
   constructor(
     private route: ActivatedRoute,

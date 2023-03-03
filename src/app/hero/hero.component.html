@@ -3,10 +3,11 @@
 
     <h2>{{hero.name | uppercase}} info</h2>
     <div><span>gender: </span>{{hero.gender}}</div>
-    <div>
-      <label for="hero-name">Hero name: </label>
-      <input id="hero-name" [(ngModel)]="hero.name" placeholder="Hero name">
-    </div>
+    <div><span>species: </span>{{hero.species}}</div>
+    <div><span>status: </span>{{hero.status}}</div>
+    <div><a *ngFor="let ep of hero.episode">{{ep}}</a></div>
+
+      
   
 </div>
 

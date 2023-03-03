@@ -1,11 +1,13 @@
-<div class="container">
-    <div class="card" *ngFor="let hero of heroes">
-      
-      <img [src]="hero.image" class="card-img-top" style="max-height: 50px;" [alt]="hero.name + ' img'">
+<div class="grid gap-3">
+  <div class="p-2 g-col-6"
+  *ngIf="heroes.length <= 0"><p>No results.......</p></div>
+
+  <div class="card" style="width: 18rem" *ngFor="let hero of heroes ">
+      <img [src]="hero.image" class="card-img-top" style="object-fit: cover;" [alt]="hero.name + ' img'">
       <div class="card-body">
         <div><span>gender: </span>{{hero.gender}}</div>
         <h5 class="card-title">{{hero.name}}</h5>
         <a routerLink="/detail/{{hero.id}}" class="btn btn-primary">look more</a>
       </div>
-    </div>
+  </div>
 </div>
