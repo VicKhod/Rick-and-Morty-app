@@ -1,5 +1,5 @@
-<div *ngIf="hero">
-  <img [src]="hero.image" class="img-responsive" style="max-height: 50px;" [alt]="hero.name + ' img'">
+<div class="container-sm-3" style="text-align: center" *ngIf="hero">
+  <img [src]="hero.image" class="img-responsive" style="object-fit: cover;" [alt]="hero.name + ' img'">
 
     <h2>{{hero.name | uppercase}} info</h2>
     <div><span>gender: </span>{{hero.gender}}</div>
@@ -11,4 +11,4 @@
   
 </div>
 
-<button type="button" (click)="goBack()">go back</button>
+<button type="button" class="btn text-white" style="background-color: #101010;" (click)="goBack()">go back</button>

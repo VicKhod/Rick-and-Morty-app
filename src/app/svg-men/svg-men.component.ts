@@ -1,0 +1,24 @@
+import { Component, OnInit } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
+
+@Component({
+  selector: 'app-svg-men',
+  templateUrl: './svg-men.component.html',
+})
+export class SvgMenComponent implements OnInit {
+  constructor (private _sanitizer: DomSanitizer) {}
+
+  activePageDataChunk = [];
+
+  ngOnInit() {
+    this.activePageDataChunk.push(this.svg);
+  }
+  
+  getSVGImage(image) {
+    return this._sanitizer.bypassSecurityTrustHtml(`${image}`);
+  }
+  
+  svg =  `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gender-male" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M9.5 2a.5.5 0 0 1 0-1h5a.5.5 0 0 1 .5.5v5a.5.5 0 0 1-1 0V2.707L9.871 6.836a5 5 0 1 1-.707-.707L13.293 2H9.5zM6 6a4 4 0 1 0 0 8 4 4 0 0 0 0-8z"/>
+</svg>`;
+}

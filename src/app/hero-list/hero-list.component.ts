@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HeroService } from '../hero.service';
 import { IHero } from '../hero';
 
+
 @Component({
   selector: 'app-hero-list',
   templateUrl: './hero-list.component.html',
@@ -10,7 +11,7 @@ import { IHero } from '../hero';
 export class HeroListComponent implements OnInit {
   
   heroes: IHero[] = [];
-  selectedHero?: IHero;
+  page = 1;
 
   constructor(private heroService: HeroService) {}
 
@@ -23,5 +24,4 @@ export class HeroListComponent implements OnInit {
       .subscribe(heroes => this.heroes = heroes);
   }
 
-  
 }
