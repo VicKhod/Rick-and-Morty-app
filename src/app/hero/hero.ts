@@ -6,3 +6,6 @@ export interface IHero {
   type?: string;
   gender?: string;
 }
+export class Hero{
+  constructor(public id: number, public name:string, public status: string){}
+}
